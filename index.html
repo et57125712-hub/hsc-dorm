@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>新生醫專學生宿舍｜安心生活・放心就學</title>
+  <title>新生醫專學生宿舍｜安心住宿・溫暖成長</title>
   <style>
     :root {
       --blue: #0f78a8;
@@ -20,6 +20,7 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -70,15 +71,8 @@
       z-index: 2;
     }
 
-    .brand {
-      font-weight: 900;
-      letter-spacing: .06em;
-    }
-
-    .nav span:last-child {
-      font-size: 14px;
-      opacity: .9;
-    }
+    .brand { font-weight: 900; letter-spacing: .06em; }
+    .nav span:last-child { font-size: 14px; opacity: .9; }
 
     .hero-inner {
       position: relative;
@@ -117,11 +111,7 @@
       color: rgba(255,255,255,.92);
     }
 
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -147,17 +137,8 @@
     }
 
     .hero-card h2 { margin: 0 0 12px; font-size: 28px; }
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .mini {
-      padding: 16px;
-      border-radius: 20px;
-      background: var(--sky);
-    }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+    .mini { padding: 16px; border-radius: 20px; background: var(--sky); }
     .mini strong { display: block; font-size: 24px; color: var(--blue); }
     .mini span { font-size: 14px; color: var(--muted); }
 
@@ -167,10 +148,7 @@
       padding: 78px 0;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 42px;
-    }
+    .section-title { text-align: center; margin-bottom: 42px; }
     .section-title .tag {
       display: inline-block;
       color: var(--blue);
@@ -188,132 +166,7 @@
     }
     .section-title p { color: var(--muted); font-size: 18px; }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .feature {
-      background: white;
-      border-radius: 24px;
-      padding: 26px 22px;
-      box-shadow: var(--shadow);
-      min-height: 230px;
-      border: 1px solid #eef4f7;
-    }
-    .icon {
-      width: 54px;
-      height: 54px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--sky), var(--mint));
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-    .feature h3 { margin: 0 0 8px; color: var(--deep); font-size: 22px; }
-    .feature p { margin: 0; color: var(--muted); }
-
-    .split {
-      display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .photo-card {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: white;
-      transform: rotate(-1.3deg);
-    }
-    .photo-card img {
-      display: block;
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-    }
-
-    #real-photos { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 78px 0; }
-    .real-gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    .real-card {
-      position: relative;
-      min-height: 260px;
-      border-radius: 28px;
-      overflow: hidden;
-      background: white;
-      box-shadow: var(--shadow);
-      isolation: isolate;
-    }
-    .real-card.featured {
-      grid-column: span 2;
-      grid-row: span 2;
-      min-height: 540px;
-    }
-    .real-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      inset: 0;
-      transform: scale(1.02);
-      transition: .35s ease;
-    }
-    .real-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 42%, rgba(8, 36, 56, .78) 100%);
-      z-index: 1;
-    }
-    .real-card div {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 18px;
-      z-index: 2;
-      color: white;
-    }
-    .real-card strong { display: block; font-size: 22px; font-weight: 1000; }
-    .real-card span { display: block; color: rgba(255,255,255,.88); font-size: 14px; }
-    .real-card:hover img { transform: scale(1.08); }
-
-    .story {
-      background: white;
-      border-radius: var(--radius);
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-    .story h2 { margin: 0 0 12px; color: var(--deep); font-size: 38px; line-height: 1.18; }
-    .story p { color: var(--muted); font-size: 18px; }
-
-    .checks {
-      display: grid;
-      gap: 12px;
-      margin-top: 24px;
-    }
-    .check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: #f7fbfd;
-      font-weight: 700;
-    }
-    .check b { color: var(--blue); }
-
-    .price-wrap {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+    .price-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .price {
       position: relative;
       overflow: hidden;
@@ -337,16 +190,8 @@
     .price .num { font-size: 42px; font-weight: 1000; color: var(--blue); }
     .price p { color: var(--muted); margin-bottom: 0; }
 
-    .subsidy-section {
-      width: min(1120px, calc(100% - 36px));
-      margin: 0 auto;
-      padding: 78px 0;
-    }
-    .subsidy-board {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+    .subsidy-section { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 78px 0; }
+    .subsidy-board { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .subsidy-card {
       position: relative;
       overflow: hidden;
@@ -373,12 +218,7 @@
       font-size: 28px;
       z-index: 1;
     }
-    .fee-flow {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 14px;
-      align-items: center;
-    }
+    .fee-flow { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; }
     .fee-box {
       background: white;
       border-radius: 24px;
@@ -439,11 +279,101 @@
       50% { transform: translateX(6px); }
     }
 
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+    .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .feature {
+      background: white;
+      border-radius: 24px;
+      padding: 26px 22px;
+      box-shadow: var(--shadow);
+      min-height: 230px;
+      border: 1px solid #eef4f7;
     }
+    .icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--sky), var(--mint));
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .feature h3 { margin: 0 0 8px; color: var(--deep); font-size: 22px; }
+    .feature p { margin: 0; color: var(--muted); }
+
+    .split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 32px; align-items: center; }
+
+    .photo-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: white;
+      transform: rotate(-1.3deg);
+    }
+    .photo-card img { display: block; width: 100%; height: 440px; object-fit: cover; }
+
+    #real-photos { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 78px 0; }
+    .real-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .real-card {
+      position: relative;
+      min-height: 260px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+    .real-card.featured { grid-column: span 2; grid-row: span 2; min-height: 540px; }
+    .real-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      transform: scale(1.02);
+      transition: .35s ease;
+    }
+    .real-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 42%, rgba(8, 36, 56, .78) 100%);
+      z-index: 1;
+    }
+    .real-card div {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2;
+      color: white;
+    }
+    .real-card strong { display: block; font-size: 22px; font-weight: 1000; }
+    .real-card span { display: block; color: rgba(255,255,255,.88); font-size: 14px; }
+    .real-card:hover img { transform: scale(1.08); }
+
+    .story {
+      background: white;
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+    .story h2 { margin: 0 0 12px; color: var(--deep); font-size: 38px; line-height: 1.18; }
+    .story p { color: var(--muted); font-size: 18px; }
+
+    .checks { display: grid; gap: 12px; margin-top: 24px; }
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #f7fbfd;
+      font-weight: 700;
+    }
+    .check b { color: var(--blue); }
+
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .time-item {
       background: var(--cream);
       border-radius: 22px;
@@ -481,9 +411,6 @@
       .hero { min-height: auto; padding: 120px 18px 80px; }
       .nav span:last-child { display: none; }
       .photo-card img { height: 320px; }
-    }
-
-    @media (max-width: 900px) {
       .real-gallery { grid-template-columns: repeat(2, 1fr); }
       .real-card.featured { grid-column: span 2; min-height: 420px; }
     }
@@ -495,7 +422,10 @@
       .real-card.featured { grid-column: span 1; min-height: 320px; }
       .real-card { min-height: 260px; }
       .arrow { transform: rotate(90deg); margin: 0 auto; }
-      @keyframes arrowPulse { 0%, 100% { transform: rotate(90deg) translateX(0); } 50% { transform: rotate(90deg) translateX(6px); } }
+      @keyframes arrowPulse {
+        0%, 100% { transform: rotate(90deg) translateX(0); }
+        50% { transform: rotate(90deg) translateX(6px); }
+      }
     }
   </style>
 </head>
@@ -503,37 +433,203 @@
   <header class="hero">
     <nav class="nav">
       <span class="brand">新生醫專｜學生宿舍</span>
-      <span>安心住宿・便利生活・家長放心</span>
+      <span>安全照護・便利生活・安心就學</span>
     </nav>
 
     <div class="hero-inner">
       <div>
         <div class="eyebrow">🏫 校園住宿介紹</div>
-        <h1>把學校，住成第二個家</h1>
-        <p>在青山與茶園旁生活，在安全門禁與師長照護中學習。新生醫專學生宿舍，陪孩子從「第一次離家」走向「安心成長」。</p>
+        <h1>在新生，住得安心，也學會成長</h1>
+        <p>從第一次離家到慢慢獨立，新生醫專學生宿舍以安全管理、生活照護與便利機能，陪伴學生穩穩展開專科生活。</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#features">看看宿舍亮點</a>
-          <a class="btn btn-secondary" href="#price">住宿費用與門禁</a>
+          <a class="btn btn-primary" href="#price">查看住宿費用</a>
+          <a class="btn btn-secondary" href="#real-photos">瀏覽宿舍環境</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <h2>家長最在意的，我們都放在心上</h2>
-        <p style="color:#667085;margin:0;">安全、便利、生活輔導與課後學習空間，是住宿生活最穩的底氣。</p>
+        <h2>讓孩子住得安心，讓家長更放心</h2>
+        <p style="color:#667085;margin:0;">宿舍不只是休息的地方，更是學生學習自律、適應團體生活與建立歸屬感的重要空間。</p>
         <div class="mini-grid">
           <div class="mini"><strong>2棟</strong><span>校內學生宿舍</span></div>
           <div class="mini"><strong>1288</strong><span>總床位規模</span></div>
           <div class="mini"><strong>套房式</strong><span>寢室含衛浴與陽台</span></div>
-          <div class="mini"><strong>全天候</strong><span>宿舍輔導與教官關懷</span></div>
+          <div class="mini"><strong>貼心</strong><span>宿舍輔導與教官關懷</span></div>
         </div>
       </div>
     </div>
   </header>
 
+  <section id="price">
+    <div class="section-title">
+      <span class="tag">住宿費用</span>
+      <h2>親民費用，減輕家庭負擔</h2>
+      <p>每學期住宿費包含水、電及燃料費，搭配住宿補助後，讓學生住得安心，家長也能更放心規劃就學支出。</p>
+    </div>
+
+    <div class="price-wrap">
+      <article class="price">
+        <h3>六人房</h3>
+        <div class="num">10,500元</div>
+        <p>每人每學期，包含水、電及燃料費；男生住宿目前以六人房為主。</p>
+      </article>
+      <article class="price">
+        <h3>四人房</h3>
+        <div class="num">13,500元</div>
+        <p>每人每學期，包含水、電及燃料費；冷氣採儲值卡方式，依個人需求使用。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="subsidy-section" id="subsidy">
+    <div class="section-title">
+      <span class="tag">補助試算</span>
+      <h2>補助後負擔更輕，安心入住更容易</h2>
+      <p>透過住宿補助，實際負擔可再降低。以下以每學期住宿費試算，讓家長快速掌握可能支出。</p>
+    </div>
+
+    <div class="subsidy-board">
+      <article class="subsidy-card">
+        <h3>六人房｜一般生補助 $5,000</h3>
+        <div class="fee-flow">
+          <div class="fee-box old-fee"><small>原價</small><strong>$10,500</strong></div>
+          <div class="arrow">→</div>
+          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="5500">$0</strong></div>
+        </div>
+        <div class="save-pill">補助 $5,000｜負擔更輕鬆</div>
+      </article>
+
+      <article class="subsidy-card">
+        <h3>六人房｜低收／中低收補助 $7,000</h3>
+        <div class="fee-flow">
+          <div class="fee-box old-fee"><small>原價</small><strong>$10,500</strong></div>
+          <div class="arrow">→</div>
+          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="3500">$0</strong></div>
+        </div>
+        <div class="save-pill">補助 $7,000｜支出再降低</div>
+      </article>
+
+      <article class="subsidy-card">
+        <h3>四人房｜一般生補助 $5,000</h3>
+        <div class="fee-flow">
+          <div class="fee-box old-fee"><small>原價</small><strong>$13,500</strong></div>
+          <div class="arrow">→</div>
+          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="8500">$0</strong></div>
+        </div>
+        <div class="save-pill">補助 $5,000｜舒適又安心</div>
+      </article>
+
+      <article class="subsidy-card">
+        <h3>四人房｜低收／中低收補助 $7,000</h3>
+        <div class="fee-flow">
+          <div class="fee-box old-fee"><small>原價</small><strong>$13,500</strong></div>
+          <div class="arrow">→</div>
+          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="6500">$0</strong></div>
+        </div>
+        <div class="save-pill">補助 $7,000｜家庭更安心</div>
+      </article>
+    </div>
+
+    <div class="subsidy-note">
+      ※ 以上為每學期住宿費試算；實際補助資格、申請方式與核定金額，依學校公告及承辦單位說明為準。
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="section-title">
+      <span class="tag">宿舍亮點</span>
+      <h2>安全、便利、照護，一次到位</h2>
+      <p>宿舍提供穩定的生活環境與多元公共空間，陪伴學生適應專科生活，養成自律與獨立能力。</p>
+    </div>
+
+    <div class="features">
+      <article class="feature">
+        <div class="icon">🔐</div>
+        <h3>門禁管理</h3>
+        <p>宿舍採磁卡感應式門禁管理，進出有規範，提升住宿安全。</p>
+      </article>
+      <article class="feature">
+        <div class="icon">🛏️</div>
+        <h3>套房式寢室</h3>
+        <p>寢室設有獨立衛浴與陽台，兼顧生活便利與住宿品質。</p>
+      </article>
+      <article class="feature">
+        <div class="icon">📚</div>
+        <h3>學習空間</h3>
+        <p>設有交誼廳、電腦設備與多功能閱覽室，課後自習與討論更便利。</p>
+      </article>
+      <article class="feature">
+        <div class="icon">🧑‍🏫</div>
+        <h3>生活輔導</h3>
+        <p>宿舍輔導員與教官共同關懷學生生活，協助學生穩定適應住宿環境。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div class="photo-card">
+        <img src="LINE_ALBUM_2026523_260525_17.jpg" alt="新生醫專學生宿舍外觀" />
+      </div>
+      <div class="story">
+        <h2>生活環境舒適，學習日常更穩定</h2>
+        <p>宿舍鄰近操場、PU跑道與籃球場，周邊可遠眺青山與茶園。課後可運動、散步、放鬆心情，讓住宿生活不只是休息，更是成長的一部分。</p>
+        <div class="checks">
+          <div class="check">✅ <span><b>生活便利：</b>洗衣、烘衣、飲水、販賣機與簡易料理設備完善。</span></div>
+          <div class="check">✅ <span><b>課後支持：</b>交誼廳、閱覽室與電腦空間，方便自習與討論。</span></div>
+          <div class="check">✅ <span><b>活動豐富：</b>迎新活動、安全演練、環境美化與住宿生關懷活動。</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="real-photos">
+    <div class="section-title">
+      <span class="tag">宿舍實景</span>
+      <h2>看得見的環境，更安心的選擇</h2>
+      <p>透過宿舍內部與公共空間實景，讓學生與家長更直觀了解未來的住宿生活。</p>
+    </div>
+
+    <div class="real-gallery">
+      <article class="real-card featured">
+        <img src="assets/images/dorm_lobby_1.jpg" alt="一宿大廳實拍" />
+        <div><strong>一宿大廳</strong><span>明亮寬敞，進出與公告資訊清楚便利</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_lounge_1.jpg" alt="一宿交誼廳實拍" />
+        <div><strong>交誼廳</strong><span>課後休息、討論功課與同儕交流的空間</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_corridor.jpg" alt="宿舍走廊實拍" />
+        <div><strong>寢室走廊</strong><span>動線清楚，生活環境整潔有序</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_room_four.jpg" alt="四人房實拍" />
+        <div><strong>四人房</strong><span>住宿空間舒適，兼顧生活品質與同儕陪伴</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_room_six.jpg" alt="六人房實拍" />
+        <div><strong>六人房</strong><span>經濟實惠，適合重視團體生活的學生</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_bed_desk.jpg" alt="床位書桌實拍" />
+        <div><strong>床位與書桌</strong><span>讀書、收納與休息機能完整</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_balcony.jpg" alt="宿舍陽台實拍" />
+        <div><strong>獨立陽台</strong><span>提供日常晾曬與生活使用空間</span></div>
+      </article>
+      <article class="real-card">
+        <img src="assets/images/dorm_laundry.jpg" alt="洗衣間實拍" />
+        <div><strong>洗衣間</strong><span>洗衣、脫水與烘衣設備齊全便利</span></div>
+      </article>
+    </div>
+  </section>
+
   <section>
     <div class="section-title">
-      <span class="tag">宿舍作息</span>
-      <h2>規律生活，是專科成長的第一堂課</h2>
+      <span class="tag">生活作息</span>
+      <h2>規律作息，培養自律與責任感</h2>
     </div>
     <div class="timeline">
       <div class="time-item"><strong>07:10</strong><span>早點名</span></div>
@@ -544,15 +640,16 @@
   </section>
 
   <aside class="final">
-    <h2>新生醫專宿舍，歡迎你的加入</h2>
-    <p>離家不代表孤單，而是開始學會生活、學會照顧自己，也一步一步走向更成熟的未來。</p>
-    <a class="btn btn-primary" href="https://sa.hsc.edu.tw/p/404-1002-12919.php?Lang=zh-tw" target="_blank" rel="noopener">查看學務處宿舍介紹</a>
+    <h2>歡迎加入新生醫專，展開安心住宿生活</h2>
+    <p>離家求學，是學習獨立的開始。新生醫專學生宿舍以安全、便利與關懷陪伴每位學生，穩穩走向更成熟的自己。</p>
+    <a class="btn btn-primary" href="https://sa.hsc.edu.tw/p/404-1002-12919.php?Lang=zh-tw" target="_blank" rel="noopener">前往學務處宿舍資訊</a>
   </aside>
 
   <footer>
-    新生學校財團法人新生醫護管理專科學校｜學生宿舍介紹頁面草稿<br />
-    建議上線前可再加入：宿舍房間實拍、申請表下載、LINE官方帳號或住宿交通服務組聯絡資訊。
+    新生學校財團法人新生醫護管理專科學校｜學生宿舍介紹<br />
+    住宿費用、補助資格與申請方式，請以學校最新公告及承辦單位說明為準。
   </footer>
+
   <script>
     const counters = document.querySelectorAll('.count');
     const money = new Intl.NumberFormat('zh-TW');
