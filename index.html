@@ -766,6 +766,159 @@
     }
     /* === End campus track photo block === */
 
+  
+    /* === Integrated fee + subsidy cards v11 === */
+    .fee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .fee-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffffff 0%, #f5fbff 100%);
+      border-radius: 32px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e8f3f8;
+    }
+
+    .fee-card::before {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: rgba(246, 181, 74, .22);
+    }
+
+    .fee-card h3 {
+      position: relative;
+      margin: 0 0 8px;
+      color: var(--deep);
+      font-size: 28px;
+      z-index: 1;
+    }
+
+    .fee-desc {
+      position: relative;
+      color: var(--muted);
+      margin: 0 0 20px;
+      z-index: 1;
+    }
+
+    .original-fee {
+      position: relative;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
+    .original-fee small {
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .original-fee strong {
+      color: var(--blue);
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 1000;
+    }
+
+    .subsidy-options {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      z-index: 1;
+    }
+
+    .subsidy-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 22px;
+      background: #ffffff;
+      border: 1px solid #edf3f7;
+    }
+
+    .subsidy-row span {
+      color: var(--deep);
+      font-weight: 900;
+    }
+
+    .subsidy-row small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .subsidy-row strong {
+      color: #ad6a00;
+      font-size: 28px;
+      white-space: nowrap;
+    }
+
+    .fee-note {
+      margin-top: 20px;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: #ffffff;
+      border: 1px solid #e8f3f8;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @media (max-width: 620px) {
+      .fee-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .fee-card {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      .fee-card h3 {
+        font-size: 22px;
+      }
+
+      .fee-desc {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .original-fee strong {
+        font-size: 36px;
+      }
+
+      .subsidy-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 15px 16px;
+      }
+
+      .subsidy-row strong {
+        font-size: 26px;
+      }
+
+      .fee-note {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+    /* === End integrated fee + subsidy cards v11 === */
+
   </style>
 </head>
 <body>
@@ -799,80 +952,61 @@
     </div>
   </header>
 
+  
   <section id="price">
     <div class="section-title">
       <span class="tag">住宿費用</span>
-      <h2>親民費用，減輕家庭負擔</h2>
+      <h2>親民費用，補助後更輕鬆</h2>
       <p>每學期住宿費包含水、電及燃料費，搭配住宿補助後，讓學生住得安心，家長也能更放心規劃就學支出。</p>
     </div>
 
-    <div class="price-wrap">
-      <article class="price">
+    <div class="fee-grid">
+      <article class="fee-card">
         <h3>六人房</h3>
-        <div class="num">10,500元</div>
-        <p>每人每學期，包含水、電及燃料費；男生住宿目前以六人房為主。</p>
+        <p class="fee-desc">每人每學期，包含水、電及燃料費；男生住宿目前以六人房為主。</p>
+        <div class="original-fee">
+          <small>原住宿費</small>
+          <strong>$10,500</strong>
+        </div>
+
+        <div class="subsidy-options">
+          <div class="subsidy-row">
+            <span>一般生補助 $5,000<small>補助後每學期負擔</small></span>
+            <strong class="count" data-target="5500">$0</strong>
+          </div>
+          <div class="subsidy-row">
+            <span>低收／中低收補助 $7,000<small>補助後每學期負擔</small></span>
+            <strong class="count" data-target="3500">$0</strong>
+          </div>
+        </div>
       </article>
-      <article class="price">
+
+      <article class="fee-card">
         <h3>四人房</h3>
-        <div class="num">13,500元</div>
-        <p>每人每學期，包含水、電及燃料費；冷氣採儲值卡方式，依個人需求使用。</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="subsidy-section" id="subsidy">
-    <div class="section-title">
-      <span class="tag">補助試算</span>
-      <h2>補助後負擔更輕，安心入住更容易</h2>
-      <p>透過住宿補助，實際負擔可再降低。以下以每學期住宿費試算，讓家長快速掌握可能支出。</p>
-    </div>
-
-    <div class="subsidy-board">
-      <article class="subsidy-card">
-        <h3>六人房｜一般生補助 $5,000</h3>
-        <div class="fee-flow">
-          <div class="fee-box old-fee"><small>原價</small><strong>$10,500</strong></div>
-          <div class="arrow">→</div>
-          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="5500">$0</strong></div>
+        <p class="fee-desc">每人每學期，包含水、電及燃料費；冷氣採儲值卡方式，依個人需求使用。</p>
+        <div class="original-fee">
+          <small>原住宿費</small>
+          <strong>$13,500</strong>
         </div>
-        <div class="save-pill">補助 $5,000｜負擔更輕鬆</div>
-      </article>
 
-      <article class="subsidy-card">
-        <h3>六人房｜低收／中低收補助 $7,000</h3>
-        <div class="fee-flow">
-          <div class="fee-box old-fee"><small>原價</small><strong>$10,500</strong></div>
-          <div class="arrow">→</div>
-          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="3500">$0</strong></div>
+        <div class="subsidy-options">
+          <div class="subsidy-row">
+            <span>一般生補助 $5,000<small>補助後每學期負擔</small></span>
+            <strong class="count" data-target="8500">$0</strong>
+          </div>
+          <div class="subsidy-row">
+            <span>低收／中低收補助 $7,000<small>補助後每學期負擔</small></span>
+            <strong class="count" data-target="6500">$0</strong>
+          </div>
         </div>
-        <div class="save-pill">補助 $7,000｜支出再降低</div>
-      </article>
-
-      <article class="subsidy-card">
-        <h3>四人房｜一般生補助 $5,000</h3>
-        <div class="fee-flow">
-          <div class="fee-box old-fee"><small>原價</small><strong>$13,500</strong></div>
-          <div class="arrow">→</div>
-          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="8500">$0</strong></div>
-        </div>
-        <div class="save-pill">補助 $5,000｜舒適又安心</div>
-      </article>
-
-      <article class="subsidy-card">
-        <h3>四人房｜低收／中低收補助 $7,000</h3>
-        <div class="fee-flow">
-          <div class="fee-box old-fee"><small>原價</small><strong>$13,500</strong></div>
-          <div class="arrow">→</div>
-          <div class="fee-box"><small>補助後負擔</small><strong class="count" data-target="6500">$0</strong></div>
-        </div>
-        <div class="save-pill">補助 $7,000｜家庭更安心</div>
       </article>
     </div>
 
-    <div class="subsidy-note">
+    <div class="fee-note">
       ※ 以上為每學期住宿費試算；實際補助資格、申請方式與核定金額，依學校公告及承辦單位說明為準。
     </div>
   </section>
+
 
   <section id="features">
     <div class="section-title">
