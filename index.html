@@ -932,6 +932,14 @@ section{padding:54px 0}.section-title{text-align:left;margin-bottom:26px}.sectio
 .features{gap:0}.feature{border:0;border-radius:0;background:none;box-shadow:none;min-height:0;border-left:2px solid #c9ded8;padding:8px 24px}.feature p{font-size:15px}.icon{background:var(--mint)}.story{background:none;box-shadow:none;padding:16px}.story h2{font-size:32px}.check{background:#eff6ed}.photo-card{box-shadow:none;transform:none}.real-gallery{grid-template-columns:repeat(4,1fr)}.real-card.featured{min-height:440px}.real-card{box-shadow:none;min-height:210px}.real-card a{display:block;position:absolute;inset:0;z-index:3}.real-card a:focus-visible{outline-offset:-5px}.real-card span{font-size:13px}.real-card div{pointer-events:none}.real-card strong{font-size:19px}.timeline{gap:12px}.time-item{border:0;background:var(--mint)}.time-item strong{color:var(--deep)}.source{font-size:13px;color:var(--muted)}.faq details{border-bottom:1px solid #d4dfdf;padding:20px 0}.faq summary{font-weight:800;font-size:19px;cursor:pointer;min-height:32px}.faq details p{max-width:850px;color:var(--muted)}.final{background:var(--deep);box-shadow:none;margin-bottom:0}.final h2{font-size:36px}.final p{font-size:17px}.final .cta-row{justify-content:center}.final .btn-primary{background:var(--gold);color:var(--deep)}footer strong{display:block;font-size:22px;color:var(--deep);margin-bottom:12px}.mobile-nav{display:none}
 @media(max-width:700px){.topbar{padding:12px 18px}.topbar nav{display:none}.topbar .school{font-size:16px}.hero{padding:28px 18px 20px}.hero-inner{grid-template-columns:1fr;gap:24px}.hero h1{font-size:42px}.hero p{font-size:16px;margin-bottom:20px}.hero-visual img{height:245px;border-radius:60px 20px 60px 20px}.hero-visual figcaption{font-size:12px}.cta-row .btn{width:auto;flex:1;padding:12px}.quicklinks{margin-top:18px}.section-title h2{font-size:29px}.section-title p{font-size:15px}section,#real-photos{width:calc(100% - 36px);padding:36px 0}.fee-grid{grid-template-columns:1fr}.fee-card{padding:22px}.room-thumb{height:170px}.subsidy-picker{gap:6px}.subsidy-picker button{padding:10px 12px;font-size:13px}.features{grid-template-columns:1fr 1fr;gap:24px 10px}.feature{padding:4px 12px}.feature h3{font-size:18px}.feature p{font-size:14px}.real-gallery{grid-template-columns:1fr 1fr;gap:12px}.real-card.featured{grid-column:span 2;grid-row:auto;min-height:240px}.real-card{min-height:195px;border-radius:18px}.real-card div{left:12px;bottom:12px;right:12px}.real-card strong{font-size:17px}.real-card span{display:none}.timeline{grid-template-columns:1fr 1fr}.time-item{padding:16px}.time-item strong{font-size:20px}.final{width:calc(100% - 36px);padding:30px 22px}.final h2{font-size:28px}.final .cta-row{display:grid}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fffdf2f5;border-top:1px solid #cfddd9;padding:8px 10px calc(8px + env(safe-area-inset-bottom));z-index:11;justify-content:space-around;gap:5px}.mobile-nav a{font-size:13px;font-weight:800;padding:12px 10px;border-radius:99px}.mobile-nav a:last-child{background:var(--blue);color:white}footer{padding-bottom:110px}section,aside{scroll-margin-top:75px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Compact comparison sheet and editorial photo story */
+dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radius:28px;width:min(560px,calc(100% - 24px));max-height:calc(100dvh - 28px);box-shadow:0 24px 90px #001b3f44;overflow:auto}dialog::backdrop{background:#061c3eb8;backdrop-filter:blur(4px)}dialog[open]{animation:sheet-in .28s cubic-bezier(.2,.8,.2,1)}@keyframes sheet-in{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}.sheet{padding:24px}.sheet-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}.sheet-head h2{font-size:26px;line-height:1.2;margin:0}.close-dialog{border:0;background:#e3edee;border-radius:50%;width:44px;height:44px;flex-shrink:0;font-size:24px;color:var(--deep);cursor:pointer}.sheet .subsidy-picker{margin:0 0 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.sheet .subsidy-picker legend{font-size:13px;margin-bottom:8px}.sheet .subsidy-picker button{font-size:13px;padding:8px 4px;min-height:44px}.sheet-result{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sheet-room{padding:18px 12px;background:#e4efff;border-radius:22px}.sheet-room:nth-child(2){background:var(--mint)}.sheet-room h3{font-size:18px;margin:0 0 8px}.sheet-room small{display:block;font-size:12px}.sheet-money{font-size:clamp(30px,7.5vw,45px);letter-spacing:-.04em;font-weight:950;line-height:1.2;font-variant-numeric:tabular-nums;display:block;margin:10px 0 2px}.sheet-status{font-size:13px;line-height:1.5;margin:12px 0 8px;font-weight:700}.sheet-terms{font-size:12px;line-height:1.6;margin:0}.sheet details{font-size:12px;margin-top:12px;border-top:1px solid #cad7db;padding-top:10px}.sheet summary{cursor:pointer;min-height:32px;font-weight:800}.sheet details p{margin:8px 0}.sheet a{text-decoration:underline}.sheet-unit{font-size:12px;font-weight:700}.sheet .source{font-size:12px}
+.real-gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;align-items:start}.real-card{grid-column:span 2;min-height:0;height:280px;border-radius:28px}.real-card.featured{grid-column:span 4;grid-row:auto;height:400px;min-height:0}.real-card:nth-child(2){grid-column:span 2;height:400px}.real-card:nth-child(5){grid-column:span 2;height:280px}.real-card:nth-child(6){grid-column:span 3;height:340px}.real-card:nth-child(7){grid-column:span 3;height:340px}.real-card:nth-child(8){grid-column:span 6;height:290px}.real-card::after{background:linear-gradient(180deg,transparent 40%,#061d42e6)}.real-card div{left:24px;bottom:22px}.real-card strong{font-size:24px}.real-card span{display:block;font-size:14px}.real-card a::after{content:'↗';position:absolute;right:16px;top:16px;display:grid;place-items:center;width:38px;height:38px;background:#fffdf2e8;color:var(--deep);border-radius:50%;font-size:21px}.real-card:hover img{transform:scale(1.04)}.reveal-ready{opacity:0;transform:translateY(18px)}.reveal-in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+#photo-dialog{width:min(980px,calc(100% - 24px));background:#071d37;color:white}.lightbox-head{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:14px}.lightbox-head h2{font-size:18px;margin:0}#lightbox-image{display:block;width:100%;max-height:70dvh;object-fit:contain;background:#071d37}#photo-caption{padding:0 18px 16px;margin:10px 0 0;font-size:14px;color:#dce8f2}
+@media(max-width:700px){#fee-dialog{margin:auto auto 12px;border-radius:26px;width:calc(100% - 24px)}.sheet{padding:18px}.sheet-head{margin-bottom:10px}.sheet-head h2{font-size:24px}.sheet-room{padding:16px 10px}.sheet-room h3{font-size:17px}.sheet-money{font-size:34px}.real-gallery{grid-template-columns:1fr 1fr;gap:14px}.real-card,.real-card:nth-child(2),.real-card:nth-child(5),.real-card:nth-child(6),.real-card:nth-child(7){grid-column:span 1;height:245px;min-height:0;border-radius:20px}.real-card.featured,.real-card:nth-child(4),.real-card:nth-child(8){grid-column:span 2;height:285px;min-height:0}.real-card div{left:14px;right:14px;bottom:16px}.real-card strong{font-size:19px}.real-card span{font-size:12px;line-height:1.5;margin-top:5px}.real-card:nth-child(3){margin-top:24px}.real-card:nth-child(7){margin-top:20px}}
+@media(max-height:580px){.sheet{padding:12px}.sheet-head{margin-bottom:6px}.sheet-room{padding:10px}.sheet-money{margin:4px 0}.sheet-status{margin:8px 0}.sheet details{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transform:none}.reveal-in,dialog[open]{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -1118,7 +1126,16 @@ section{padding:54px 0}.section-title{text-align:left;margin-bottom:26px}.sectio
     住宿費用、補助資格與申請方式，請以學校最新公告及承辦單位說明為準。
   </footer>
 
-  <script>
+
+<dialog id="fee-dialog" aria-labelledby="fee-title" aria-describedby="fee-condition">
+<div class="sheet"><div class="sheet-head"><h2 id="fee-title">住宿費，一眼算好</h2><button type="button" class="close-dialog" aria-label="關閉費用比較" autofocus>×</button></div>
+<fieldset class="subsidy-picker"><legend>選擇補助身分 · 每人每學期</legend><button type="button" data-sheet-subsidy="0" aria-pressed="false">原住宿費</button><button type="button" data-sheet-subsidy="5000" aria-pressed="true">一般生</button><button type="button" data-sheet-subsidy="7000" aria-pressed="false">低收／中低收</button></fieldset>
+<div class="sheet-result"><article class="sheet-room"><h3>六人房</h3><small>原價 $10,500</small><span class="sheet-money" data-sheet-base="10500">$5,500</span><span class="sheet-unit">元／學期</span></article><article class="sheet-room"><h3>四人房</h3><small>一般套房・原價 $13,500</small><span class="sheet-money" data-sheet-base="13500">$8,500</span><span class="sheet-unit">元／學期</span></article></div>
+<p class="sheet-status" id="sheet-status" role="status" aria-live="polite">一般生：符合資格後補助 $5,000 的試算</p><p class="sheet-terms" id="fee-condition">含水、電及燃料費；<b>冷氣儲值另計</b>。<br>不含寒暑假，補助與入住安排依當期核定。</p>
+<details><summary>查看收費依據與補助細則</summary><p>收費參照官方連結之 2025/2/27 標準；補助參考學校招生資料。補助擇一、不重複相加，其他適用身分請洽住服組。另有四人溫馨房 $10,500，房型配置以學校核定為準。本頁不受理申請，也不保證床位。</p><a href="https://sa.hsc.edu.tw/p/404-1002-12919.php?Lang=zh-tw" target="_blank" rel="noopener">查看學校收費與宿舍資訊 ↗</a></details></div></dialog>
+<dialog id="photo-dialog" aria-labelledby="photo-title"><div class="lightbox-head"><h2 id="photo-title">宿舍實景</h2><button type="button" class="close-dialog" aria-label="關閉照片" autofocus>×</button></div><img id="lightbox-image" alt=""><p id="photo-caption"></p></dialog>
+<nav class="mobile-nav" aria-label="手機快速導覽"><a href="#price">費用比較</a><a href="#real-photos">真實照片</a><a href="#faq">住宿問答</a><a href="#apply">申請資訊</a></nav>
+<script>
 const format = new Intl.NumberFormat('zh-TW');
 document.querySelectorAll('[data-subsidy]').forEach(button => button.addEventListener('click', () => {
  const subsidy=Number(button.dataset.subsidy);
@@ -1126,6 +1143,59 @@ document.querySelectorAll('[data-subsidy]').forEach(button => button.addEventLis
  document.querySelectorAll('[data-base]').forEach(el => el.textContent='$'+format.format(Number(el.dataset.base)-subsidy));
  document.getElementById('estimate-status').textContent=subsidy ? '試算：符合所選補助資格後，每人每學期扣除 '+format.format(subsidy)+' 元；實際仍須依公告核定。' : '目前顯示原住宿費；補助須符合資格，適用身分仍須依當期公告核定。';
 }));
+
+// Native modal dialogs provide focus trapping, inert background and Escape support.
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const feeDialog=document.getElementById('fee-dialog'), photoDialog=document.getElementById('photo-dialog');
+let opener=null, savedScroll=0, savedBodyStyle=null;
+function openModal(dialog,trigger){
+ if(dialog.open)return;
+ opener=trigger;savedScroll=window.scrollY;savedBodyStyle=document.body.getAttribute('style');
+ document.body.style.position='fixed';document.body.style.top=`-${savedScroll}px`;document.body.style.width='100%';document.body.style.overflow='hidden';
+ dialog.showModal();dialog.querySelector('.close-dialog').focus({preventScroll:true});
+}
+[feeDialog,photoDialog].forEach(dialog=>{
+ dialog.querySelector('.close-dialog').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('keydown',e=>{
+  if(e.key!=='Tab')return;
+  const list=[...dialog.querySelectorAll('button,a[href],summary,[tabindex]')].filter(el=>!el.disabled&&(el.tabIndex>=0||el.tagName==='SUMMARY')&&el.getClientRects().length&&(!el.closest('details')||el.closest('details').open||el.tagName==='SUMMARY'));
+  const first=list[0],last=list[list.length-1];
+  if(e.shiftKey&&(document.activeElement===first||!dialog.contains(document.activeElement))){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&(document.activeElement===last||!dialog.contains(document.activeElement))){e.preventDefault();first.focus();}
+ });
+ let startedOutside=false;
+ const outside=e=>{const r=dialog.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};
+ dialog.addEventListener('pointerdown',e=>{startedOutside=outside(e)});
+ dialog.addEventListener('click',e=>{if(e.target===dialog&&startedOutside&&outside(e))dialog.close();startedOutside=false});
+ dialog.addEventListener('close',()=>{
+ if(savedBodyStyle===null)document.body.removeAttribute('style');else document.body.setAttribute('style',savedBodyStyle);
+ const previous=document.documentElement.style.scrollBehavior;document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,savedScroll);document.documentElement.style.scrollBehavior=previous;
+ if(opener&&opener.isConnected)opener.focus({preventScroll:true});opener=null;
+ });
+});
+const frames=new WeakMap();
+function renderSheet(subsidy,animate=true){
+ feeDialog.querySelectorAll('[data-sheet-subsidy]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.sheetSubsidy)===subsidy)));
+ feeDialog.querySelectorAll('[data-sheet-base]').forEach(el=>{
+ cancelAnimationFrame(frames.get(el));const end=Number(el.dataset.sheetBase)-subsidy;
+ const start=Number(el.textContent.replace(/[^0-9]/g,''));
+ if(!animate||reduced.matches||start===end){el.textContent='$'+format.format(end);return;}
+ const begin=performance.now();function tick(now){const t=Math.min((now-begin)/320,1);el.textContent='$'+format.format(Math.round(start+(end-start)*(1-Math.pow(1-t,3))));if(t<1)frames.set(el,requestAnimationFrame(tick));}
+ frames.set(el,requestAnimationFrame(tick));
+ });
+ document.getElementById('sheet-status').textContent=subsidy===0?'未扣補助：原住宿費試算':subsidy===5000?'一般生：符合資格後補助 $5,000 的試算':'低收／中低收：符合資格後補助 $7,000 的試算';
+}
+feeDialog.querySelectorAll('[data-sheet-subsidy]').forEach(b=>b.addEventListener('click',()=>renderSheet(Number(b.dataset.sheetSubsidy))));
+document.querySelectorAll('a[href="#price"]').forEach(a=>{
+ if(a.classList.contains('skip'))return;
+ a.setAttribute('aria-haspopup','dialog');a.setAttribute('aria-controls','fee-dialog');
+ a.addEventListener('click',e=>{e.preventDefault();feeDialog.querySelector('details').open=false;renderSheet(5000,false);openModal(feeDialog,a)});
+});
+document.querySelectorAll('.real-card a').forEach(a=>{
+ a.setAttribute('aria-label','放大照片：'+a.parentElement.querySelector('strong').textContent);a.setAttribute('aria-haspopup','dialog');
+ a.addEventListener('click',e=>{e.preventDefault();const card=a.parentElement,img=card.querySelector('img');document.getElementById('lightbox-image').src=a.getAttribute('href');document.getElementById('lightbox-image').alt=img.alt;document.getElementById('photo-title').textContent=card.querySelector('strong').textContent;document.getElementById('photo-caption').textContent=card.querySelector('span').textContent+'｜原站實景照片';openModal(photoDialog,a)});
+});
+if('IntersectionObserver' in window&&!reduced.matches){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('reveal-ready');e.target.classList.add('reveal-in');reveal.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.real-card').forEach(el=>{el.classList.add('reveal-ready');reveal.observe(el)})}
 </script>
-<nav class="mobile-nav" aria-label="手機快速導覽"><a href="#price">費用比較</a><a href="#real-photos">真實照片</a><a href="#faq">住宿問答</a><a href="#apply">申請資訊</a></nav></body>
+</body>
 </html>
