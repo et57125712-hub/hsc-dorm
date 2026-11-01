@@ -941,12 +941,12 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 @media(max-height:580px){.sheet{padding:12px}.sheet-head{margin-bottom:6px}.sheet-room{padding:10px}.sheet-money{margin:4px 0}.sheet-status{margin:8px 0}.sheet details{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transform:none}.reveal-in,dialog[open]{animation:none!important;transition:none!important}}
 
-/* A small in-flow guide: never covers reading or mobile navigation. */
-.student-guide{display:flex;align-items:center;gap:10px;margin:0 0 12px;min-height:112px;color:#215cb3;font-weight:900}.student-guide svg{width:98px;height:112px;flex:none;overflow:visible}.student-guide span{font-size:18px}.student-guide small{display:block;font-size:11px;font-weight:500;color:#587078;margin-top:5px}.arm-left{transform-origin:46px 73px}.arm-right{transform-origin:94px 74px}.arm-left,.arm-right,.student-body{transition:transform .65s cubic-bezier(.22,1,.36,1)}.book{opacity:0;transition:opacity .4s}.student-guide[data-pose="read"] .book{opacity:1}.student-guide.is-active[data-pose="point"] .arm-right{transform:rotate(-80deg)}.student-guide.is-active[data-pose="read"] .arm-left{transform:rotate(-28deg)}.student-guide.is-active[data-pose="read"] .arm-right{transform:rotate(28deg)}.student-guide.is-active[data-pose="wave"] .arm-right{animation:student-wave 1.3s ease-in-out 2}.student-guide.is-active .student-body{transform:translateY(-3px)}@keyframes student-wave{0%,100%{transform:rotate(-125deg)}50%{transform:rotate(-150deg)}}.chapter-ready{opacity:0;transform:translateY(20px)}.chapter-in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}.fee-note summary{cursor:pointer;font-weight:800}.fee-note p{margin:12px 0}.sheet details button{margin:8px 0;padding:8px 12px;border:1px solid #bbd4da;border-radius:16px;background:#edf5f7;color:#294963}.fee-desc{min-height:0}.fee-card .estimate{margin-bottom:0}@media(max-width:700px){.student-guide{min-height:88px;margin-bottom:8px}.student-guide svg{width:77px;height:88px}.student-guide span{font-size:16px}.fee-card{padding:18px}.fee-desc{font-size:14px}}@media(prefers-reduced-motion:reduce){.student-guide *{animation:none!important;transition:none!important}.chapter-ready,.chapter-in{opacity:1;transform:none;transition:none}}
-
-/* Canonical female editor, reference: approved physical standee (2026-10-01).
-   Three real illustrated poses; position changes are pose frames, not fake floating. */
-.student-guide .editor-sprite{display:block;flex:none;width:84px;height:126px;background-image:url('assets/images/nursing-editor-poses.png');background-size:300% 100%;background-repeat:no-repeat;background-position:0% 0;margin:0;transition:none}.student-guide{min-height:126px}.student-guide.is-active[data-pose="point"] .editor-sprite{background-position:50% 0}.student-guide.is-active[data-pose="read"] .editor-sprite{background-position:100% 0}.student-guide.is-active[data-pose="wave"] .editor-sprite{animation:editor-greet 1.4s steps(1,end) 1}@keyframes editor-greet{0%,45%,100%{background-position:0% 0}25%,70%{background-position:50% 0}}@media(max-width:700px){.student-guide .editor-sprite{width:72px;height:108px}.student-guide{min-height:108px}}@media(prefers-reduced-motion:reduce){.student-guide .editor-sprite{animation:none!important}}
+/* Restrained editorial layout; photos and clear typography lead. */
+.chapter-ready{opacity:0;transform:translateY(14px)}.chapter-in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}.fee-note summary{cursor:pointer;font-weight:800}.fee-note p{margin:12px 0}.sheet details button{margin:8px 0;padding:8px 12px;border:1px solid #bbd4da;border-radius:16px;background:#edf5f7;color:#294963}.fee-desc{min-height:0}.fee-card .estimate{margin-bottom:0}
+.hero h1,.section-title h2,.final h2{letter-spacing:-.025em;text-wrap:balance}.hero p,.section-title p{line-height:1.85}.section-title .tag{font-size:12px;font-weight:800;letter-spacing:.16em}.section-title{margin-bottom:30px}.section-title h2{margin:10px 0 16px}.hero-visual img{border-radius:28px}.real-card{border-radius:20px}.real-card strong{letter-spacing:.02em}.real-card span{line-height:1.6}.feature h3{margin-top:0}.features{gap:28px}.feature{border-left:1px solid #d8e0da}.hero-visual figcaption{padding-top:12px;color:#657375}
+@media(min-width:701px){section,#real-photos{padding-top:64px;padding-bottom:64px}.hero-inner{gap:56px}.section-title p{max-width:680px}.real-gallery{gap:20px}}
+@media(max-width:700px){.fee-card{padding:18px}.fee-desc{font-size:14px}.section-title{margin-bottom:24px}.section-title h2{font-size:28px;line-height:1.35;margin:10px 0 14px}.features{gap:28px 16px}.hero-visual img{border-radius:22px}.real-card{border-radius:16px}section,#real-photos{padding-top:42px;padding-bottom:42px}}
+@media(prefers-reduced-motion:reduce){.chapter-ready,.chapter-in{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -954,7 +954,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 <div class="topbar"><a href="#top" class="school"><b aria-hidden="true">H</b>新生醫專｜學生宿舍</a><nav aria-label="主要導覽"><a href="#price">房型與費用</a><a href="#real-photos">宿舍實景</a><a href="#faq">住宿問答</a><a href="#apply">申請資訊 ↗</a></nav></div>
 <header class="hero" id="top"><div class="hero-inner"><div><span class="eyebrow">新生醫專・校園生活指南</span><h1>第一次離家，<br>在新生安頓日常。</h1><p>住進校園，把生活慢慢安頓好。<br>看看房間、算好預算，再一起準備入住。</p><div class="cta-row"><a class="btn btn-primary" href="#price">比較房型費用 ↓</a><a class="btn btn-secondary" href="#real-photos">看看實際環境</a></div><div class="quicklinks"><span>四人房 / 六人房</span><span>套房式寢室</span><span>校內生活機能</span></div></div><figure class="hero-visual"><img loading="lazy" src="LINE_ALBUM_2026523_260525_22.jpg" alt="新生醫專校內學生宿舍實景" fetchpriority="high"><figcaption>校園裡，展開你的新生活 ✦</figcaption></figure></div></header><main>
   <section id="price">
-    <div class="student-guide" data-pose="point"><span class="editor-sprite" aria-hidden="true"></span><span>一起算好預算<small>護理科小編 · 插畫</small></span></div><div class="section-title">
+    <div class="section-title">
       <span class="tag">住宿費用</span>
       <h2>先算預算，再選房型</h2>
       <p>每人、每學期計算。包含水、電及燃料費；兩種房型的冷氣儲值費皆另計。</p>
@@ -979,7 +979,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 
 
   <section id="features">
-    <div class="student-guide" data-pose="wave"><span class="editor-sprite" aria-hidden="true"></span><span>一起認識宿舍<small>護理科小編 · 插畫</small></span></div><div class="section-title">
+    <div class="section-title">
       <span class="tag">宿舍亮點</span>
       <h2>課後日常，留在校園就好</h2>
       <p>原站介紹：校內設有 2 棟宿舍、共 1,288 床，提供套房式寢室與公共空間。實際床位釋出及配置以當期公告為準。</p>
@@ -987,22 +987,18 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 
     <div class="features">
       <article class="feature">
-        <div class="icon">🔐</div>
         <h3>門禁管理</h3>
         <p>宿舍採磁卡感應式門禁管理，進出有規範，提升住宿安全。</p>
       </article>
       <article class="feature">
-        <div class="icon">🛏️</div>
         <h3>套房式寢室</h3>
         <p>寢室設有獨立衛浴與陽台，兼顧生活便利與住宿品質。</p>
       </article>
       <article class="feature">
-        <div class="icon">📚</div>
         <h3>學習空間</h3>
         <p>設有交誼廳、電腦設備與多功能閱覽室，課後自習與討論更便利。</p>
       </article>
       <article class="feature">
-        <div class="icon">🧑‍🏫</div>
         <h3>生活輔導</h3>
         <p>宿舍輔導員與教官共同關懷學生生活，協助學生穩定適應住宿環境。</p>
       </article>
@@ -1036,7 +1032,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
   </section>
 
   <section id="real-photos">
-    <div class="student-guide" data-pose="point"><span class="editor-sprite" aria-hidden="true"></span><span>看看真實環境<small>護理科小編 · 插畫</small></span></div><div class="section-title">
+    <div class="section-title">
       <span class="tag">宿舍實景</span>
       <h2>看看宿舍裡的日常</h2>
       <p>從寢室到公共空間，都是宿舍實景。點開照片，看清楚喜歡的角落。</p>
@@ -1079,7 +1075,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
   </section>
 
   <section id="routine">
-    <div class="student-guide" data-pose="read"><span class="editor-sprite" aria-hidden="true"></span><span>慢慢找到節奏<small>護理科小編 · 插畫</small></span></div><div class="section-title">
+    <div class="section-title">
       <span class="tag">生活作息</span>
       <h2>先認識宿舍的生活節奏</h2>
     </div>
@@ -1091,7 +1087,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
     </div>
   </section>
 
-<section id="faq" class="faq"><div class="student-guide" data-pose="read"><span class="editor-sprite" aria-hidden="true"></span><span>入住前小筆記<small>護理科小編 · 插畫</small></span></div><div class="section-title"><span class="tag">住宿問答</span><h2>入住前，你可能想知道</h2></div><details><summary>住宿費包含冷氣費嗎？</summary><p>住宿費包含水、電及燃料費；冷氣採儲值卡方式，費用另計。四人房與六人房都應另外預留這筆支出。</p></details><details><summary>選擇補助身分就代表能領到嗎？</summary><p>不是。此頁只是試算，沒有申請或審核功能。一般生與低收入戶／中低收入戶補助擇符合的類別計算，實際資格、核定與申請方式依當期公告。</p></details><details><summary>可以在這裡申請住宿或選床位嗎？</summary><p>此頁提供介紹，不收集個人資料，也不受理住宿申請。請至下方官方住宿資訊查看當期流程；房型與床位安排以學校核定為準。</p></details><details><summary>生活設施與作息以什麼為準？</summary><p>此頁保留原站的宿舍設備與作息介紹供認識環境；實際開放、點名、門禁及寢室安排，請以入住當期住宿規範為準。</p></details></section></main>
+<section id="faq" class="faq"><div class="section-title"><span class="tag">住宿問答</span><h2>入住前，你可能想知道</h2></div><details><summary>住宿費包含冷氣費嗎？</summary><p>住宿費包含水、電及燃料費；冷氣採儲值卡方式，費用另計。四人房與六人房都應另外預留這筆支出。</p></details><details><summary>選擇補助身分就代表能領到嗎？</summary><p>不是。此頁只是試算，沒有申請或審核功能。一般生與低收入戶／中低收入戶補助擇符合的類別計算，實際資格、核定與申請方式依當期公告。</p></details><details><summary>可以在這裡申請住宿或選床位嗎？</summary><p>此頁提供介紹，不收集個人資料，也不受理住宿申請。請至下方官方住宿資訊查看當期流程；房型與床位安排以學校核定為準。</p></details><details><summary>生活設施與作息以什麼為準？</summary><p>此頁保留原站的宿舍設備與作息介紹供認識環境；實際開放、點名、門禁及寢室安排，請以入住當期住宿規範為準。</p></details></section></main>
   <aside class="final" id="apply">
     <h2>準備好，走下一步</h2>
     <p>查看官方收費、住宿規範與當期申請公告。房型、補助及入住安排，向學校確認最安心。</p>
@@ -1174,13 +1170,8 @@ document.querySelectorAll('.real-card a').forEach(a=>{
 });
 if('IntersectionObserver' in window&&!reduced.matches){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('reveal-ready');e.target.classList.add('reveal-in');reveal.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.real-card').forEach(el=>{el.classList.add('reveal-ready');reveal.observe(el)})}
 
-// Section-driven motion only: native scrolling, no wheel/touch interception.
+// One-time chapter reveals; native scrolling remains untouched.
 if('IntersectionObserver' in window){
- const guideObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  const guide=entry.target.querySelector('.student-guide');if(guide)guide.classList.toggle('is-active',entry.isIntersecting);
-  if(entry.isIntersecting)document.body.dataset.guideState=guide?.dataset.pose||'wave';
- }),{threshold:0,rootMargin:'-12% 0px -30% 0px'});
- document.querySelectorAll('section:has(.student-guide)').forEach(section=>guideObserver.observe(section));
  if(!reduced.matches){const chapters=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.replace('chapter-ready','chapter-in');chapters.unobserve(entry.target)}}),{threshold:.08});document.querySelectorAll('.section-title,.feature,.split,.time-item').forEach(el=>{el.classList.add('chapter-ready');chapters.observe(el)})}
 }
 </script>
