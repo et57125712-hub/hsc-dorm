@@ -940,71 +940,44 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 @media(max-width:700px){#fee-dialog{margin:auto auto 12px;border-radius:26px;width:calc(100% - 24px)}.sheet{padding:18px}.sheet-head{margin-bottom:10px}.sheet-head h2{font-size:24px}.sheet-room{padding:16px 10px}.sheet-room h3{font-size:17px}.sheet-money{font-size:34px}.real-gallery{grid-template-columns:1fr 1fr;gap:14px}.real-card,.real-card:nth-child(2),.real-card:nth-child(5),.real-card:nth-child(6),.real-card:nth-child(7){grid-column:span 1;height:245px;min-height:0;border-radius:20px}.real-card.featured,.real-card:nth-child(4),.real-card:nth-child(8){grid-column:span 2;height:285px;min-height:0}.real-card div{left:14px;right:14px;bottom:16px}.real-card strong{font-size:19px}.real-card span{font-size:12px;line-height:1.5;margin-top:5px}.real-card:nth-child(3){margin-top:24px}.real-card:nth-child(7){margin-top:20px}}
 @media(max-height:580px){.sheet{padding:12px}.sheet-head{margin-bottom:6px}.sheet-room{padding:10px}.sheet-money{margin:4px 0}.sheet-status{margin:8px 0}.sheet details{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transform:none}.reveal-in,dialog[open]{animation:none!important;transition:none!important}}
+
+/* A small in-flow guide: never covers reading or mobile navigation. */
+.student-guide{display:flex;align-items:center;gap:10px;margin:0 0 12px;min-height:112px;color:#215cb3;font-weight:900}.student-guide svg{width:98px;height:112px;flex:none;overflow:visible}.student-guide span{font-size:18px}.student-guide small{display:block;font-size:11px;font-weight:500;color:#587078;margin-top:5px}.arm-left{transform-origin:46px 73px}.arm-right{transform-origin:94px 74px}.arm-left,.arm-right,.student-body{transition:transform .65s cubic-bezier(.22,1,.36,1)}.book{opacity:0;transition:opacity .4s}.student-guide[data-pose="read"] .book{opacity:1}.student-guide.is-active[data-pose="point"] .arm-right{transform:rotate(-80deg)}.student-guide.is-active[data-pose="read"] .arm-left{transform:rotate(-28deg)}.student-guide.is-active[data-pose="read"] .arm-right{transform:rotate(28deg)}.student-guide.is-active[data-pose="wave"] .arm-right{animation:student-wave 1.3s ease-in-out 2}.student-guide.is-active .student-body{transform:translateY(-3px)}@keyframes student-wave{0%,100%{transform:rotate(-125deg)}50%{transform:rotate(-150deg)}}.chapter-ready{opacity:0;transform:translateY(20px)}.chapter-in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}.fee-note summary{cursor:pointer;font-weight:800}.fee-note p{margin:12px 0}.sheet details button{margin:8px 0;padding:8px 12px;border:1px solid #bbd4da;border-radius:16px;background:#edf5f7;color:#294963}.fee-desc{min-height:0}.fee-card .estimate{margin-bottom:0}@media(max-width:700px){.student-guide{min-height:88px;margin-bottom:8px}.student-guide svg{width:77px;height:88px}.student-guide span{font-size:16px}.fee-card{padding:18px}.fee-desc{font-size:14px}}@media(prefers-reduced-motion:reduce){.student-guide *{animation:none!important;transition:none!important}.chapter-ready,.chapter-in{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#price">跳到住宿費用</a>
 <div class="topbar"><a href="#top" class="school"><b aria-hidden="true">H</b>新生醫專｜學生宿舍</a><nav aria-label="主要導覽"><a href="#price">房型與費用</a><a href="#real-photos">宿舍實景</a><a href="#faq">住宿問答</a><a href="#apply">申請資訊 ↗</a></nav></div>
-<header class="hero" id="top"><div class="hero-inner"><div><span class="eyebrow">新生醫專・校園生活指南</span><h1>第一次離家，<br>在新生安頓日常。</h1><p>先看房型與費用，再走進真實宿舍。<br>把住宿的大小問題，一起弄清楚。</p><div class="cta-row"><a class="btn btn-primary" href="#price">比較房型費用 ↓</a><a class="btn btn-secondary" href="#real-photos">看看實際環境</a></div><div class="quicklinks"><span>四人房 / 六人房</span><span>套房式寢室</span><span>校內生活機能</span></div></div><figure class="hero-visual"><img loading="lazy" src="LINE_ALBUM_2026523_260525_22.jpg" alt="新生醫專校內學生宿舍實景" fetchpriority="high"><figcaption>校園裡，展開你的新生活 ✦</figcaption></figure></div></header><main>
+<header class="hero" id="top"><div class="hero-inner"><div><span class="eyebrow">新生醫專・校園生活指南</span><h1>第一次離家，<br>在新生安頓日常。</h1><p>住進校園，把生活慢慢安頓好。<br>看看房間、算好預算，再一起準備入住。</p><div class="cta-row"><a class="btn btn-primary" href="#price">比較房型費用 ↓</a><a class="btn btn-secondary" href="#real-photos">看看實際環境</a></div><div class="quicklinks"><span>四人房 / 六人房</span><span>套房式寢室</span><span>校內生活機能</span></div></div><figure class="hero-visual"><img loading="lazy" src="LINE_ALBUM_2026523_260525_22.jpg" alt="新生醫專校內學生宿舍實景" fetchpriority="high"><figcaption>校園裡，展開你的新生活 ✦</figcaption></figure></div></header><main>
   <section id="price">
-    <div class="section-title">
+    <div class="student-guide" data-pose="point"><svg viewBox="0 0 140 160" aria-hidden="true" focusable="false"><ellipse cx="70" cy="150" rx="42" ry="6" fill="#d9eacb"/><g class="student-body"><path d="M49 112h19v31H49zm23 0h19v31H72" fill="white" stroke="#345b80" stroke-width="2"/><path d="M47 141h22v8H43q-3-5 4-8m25 0h20l6 8H72" fill="#234668"/><path d="M45 68q25-13 50 0l5 47H40z" fill="#83cbed" stroke="#345b80" stroke-width="2"/><path d="M54 65q8 19 16 6q8 13 16-6" fill="white" stroke="#345b80" stroke-width="1.5"/><path d="M70 76v34M80 94h13v10H80z" fill="none" stroke="#fff" stroke-width="2"/><circle cx="73" cy="87" r="1.5" fill="white"/><g class="arm-left"><path d="M46 73L29 91" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M31 87l-5 6" stroke="white" stroke-width="8"/><circle cx="24" cy="98" r="7" fill="#f7c9aa"/></g><g class="arm-right"><path d="M94 74l17 17" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M108 87l6 6" stroke="white" stroke-width="8"/><circle cx="118" cy="97" r="7" fill="#f7c9aa"/></g><g class="book"><path d="M46 91q12-5 24 2q12-7 24-2v24q-12-4-24 1q-12-5-24-1z" fill="#fff4a7" stroke="#345b80" stroke-width="2"/><path d="M70 94v21" stroke="#345b80"/></g><path d="M45 43q-3-31 25-31q30 0 26 34l-3 21H46z" fill="#294963"/><ellipse cx="70" cy="44" rx="24" ry="25" fill="#f7c9aa"/><path d="M46 35q6-27 27-20q22 0 22 23q-16-1-23-15q-8 14-26 12" fill="#294963"/><circle cx="61" cy="45" r="2" fill="#294963"/><circle cx="80" cy="45" r="2" fill="#294963"/><path d="M64 55q6 6 12 0" fill="none" stroke="#a64c43" stroke-width="2" stroke-linecap="round"/><circle cx="53" cy="53" r="4" fill="#eda897"/><circle cx="87" cy="53" r="4" fill="#eda897"/></g></svg><span>一起算好預算<small>護理科小嚮導 · 插畫</small></span></div><div class="section-title">
       <span class="tag">住宿費用</span>
-      <h2>兩種房型，一眼比較</h2>
+      <h2>先算預算，再選房型</h2>
       <p>每人、每學期計算。包含水、電及燃料費；兩種房型的冷氣儲值費皆另計。</p>
     </div>
 
-<fieldset class="subsidy-picker"><legend>選擇試算身分（不需填寫個人資料）</legend><button type="button" data-subsidy="0" aria-pressed="true">原住宿費</button><button type="button" data-subsidy="5000" aria-pressed="false">一般生補助</button><button type="button" data-subsidy="7000" aria-pressed="false">低收／中低收補助</button></fieldset><p id="estimate-status" class="source" aria-live="polite">目前顯示原住宿費；補助須符合資格，適用身分仍須依當期公告核定。</p><div class="fee-grid">
+<fieldset class="subsidy-picker"><legend>選擇試算身分（不需填寫個人資料）</legend><button type="button" data-subsidy="5000" aria-pressed="true">一般生補助</button><button type="button" data-subsidy="7000" aria-pressed="false">低收／中低收補助</button></fieldset><p id="estimate-status" class="source" aria-live="polite">預設為符合一般生補助資格的試算；實際資格與金額依當期公告核定。</p><div class="fee-grid">
       <article class="fee-card">
         <img class="room-thumb" loading="lazy" src="assets/images/dorm_room_six.jpg" alt="六人房實景"><h3>六人房</h3>
         <p class="fee-desc">每人每學期，包含水、電及燃料費；男生住宿目前以六人房為主。</p>
-        <div class="original-fee">
-          <small>原住宿費</small>
-          <strong>$10,500</strong>
-        </div>
-
-        <p class="estimate-label">目前試算金額</p><div class="estimate"><span data-base="10500">$10,500</span> <small>元／學期</small></div><div class="subsidy-options">
-          <div class="subsidy-row">
-            <span>符合一般生補助 $5,000<small>補助後每學期負擔</small></span>
-            <strong >$5,500</strong>
-          </div>
-          <div class="subsidy-row">
-            <span>符合低收／中低收補助 $7,000<small>補助後每學期負擔</small></span>
-            <strong >$3,500</strong>
-          </div>
-        </div>
-      </article>
+<p class="estimate-label">符合所選補助資格後</p><div class="estimate"><span data-base="10500">$5,500</span> <small>元／學期</small></div></article>
 
       <article class="fee-card">
         <img class="room-thumb" loading="lazy" src="assets/images/dorm_room_four.jpg" alt="四人房實景"><h3>四人房（一般套房）</h3>
         <p class="fee-desc">每人每學期，包含水、電及燃料費；冷氣採儲值卡方式，依個人需求使用。</p>
-        <div class="original-fee">
-          <small>原住宿費</small>
-          <strong>$13,500</strong>
-        </div>
-
-        <p class="estimate-label">目前試算金額</p><div class="estimate"><span data-base="13500">$13,500</span> <small>元／學期</small></div><div class="subsidy-options">
-          <div class="subsidy-row">
-            <span>符合一般生補助 $5,000<small>補助後每學期負擔</small></span>
-            <strong >$8,500</strong>
-          </div>
-          <div class="subsidy-row">
-            <span>符合低收／中低收補助 $7,000<small>補助後每學期負擔</small></span>
-            <strong >$6,500</strong>
-          </div>
-        </div>
-      </article>
+<p class="estimate-label">符合所選補助資格後</p><div class="estimate"><span data-base="13500">$8,500</span> <small>元／學期</small></div></article>
     </div>
 
-    <div class="fee-note" id="subsidy">
+    <details class="fee-note" id="subsidy"><summary>補助資格、原價算式與收費依據</summary><p>六人房：10,500 − 5,000 = 5,500 元；一般四人房：13,500 − 5,000 = 8,500 元。低收／中低收符合資格者，改扣 7,000 元。</p>
       <strong>補助不重複相加，須符合適用資格。</strong>一般生符合資格者每學期補助 5,000 元；低收入戶／中低收入戶符合資格者每學期補助 7,000 元。身分認定、適用對象、申請文件與核定結果，以當期公告為準。<br>其他適用身分或加碼補貼請洽住服組。以上為住宿費試算，非錄取或床位保證。<a href="#apply">查看官方資料與申請資訊 →</a><p class="source">收費依官方連結之 2025/2/27 收費標準；補助參考學校招生資料，非新年度核定通知。另有四人溫馨房 10,500 元之房型，配置與申請請洽學校。以上不含寒暑假，實際收費以入住當期公告為準。</p>
-    </div>
+    </details>
   </section>
 
 
   <section id="features">
-    <div class="section-title">
+    <div class="student-guide" data-pose="wave"><svg viewBox="0 0 140 160" aria-hidden="true" focusable="false"><ellipse cx="70" cy="150" rx="42" ry="6" fill="#d9eacb"/><g class="student-body"><path d="M49 112h19v31H49zm23 0h19v31H72" fill="white" stroke="#345b80" stroke-width="2"/><path d="M47 141h22v8H43q-3-5 4-8m25 0h20l6 8H72" fill="#234668"/><path d="M45 68q25-13 50 0l5 47H40z" fill="#83cbed" stroke="#345b80" stroke-width="2"/><path d="M54 65q8 19 16 6q8 13 16-6" fill="white" stroke="#345b80" stroke-width="1.5"/><path d="M70 76v34M80 94h13v10H80z" fill="none" stroke="#fff" stroke-width="2"/><circle cx="73" cy="87" r="1.5" fill="white"/><g class="arm-left"><path d="M46 73L29 91" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M31 87l-5 6" stroke="white" stroke-width="8"/><circle cx="24" cy="98" r="7" fill="#f7c9aa"/></g><g class="arm-right"><path d="M94 74l17 17" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M108 87l6 6" stroke="white" stroke-width="8"/><circle cx="118" cy="97" r="7" fill="#f7c9aa"/></g><g class="book"><path d="M46 91q12-5 24 2q12-7 24-2v24q-12-4-24 1q-12-5-24-1z" fill="#fff4a7" stroke="#345b80" stroke-width="2"/><path d="M70 94v21" stroke="#345b80"/></g><path d="M45 43q-3-31 25-31q30 0 26 34l-3 21H46z" fill="#294963"/><ellipse cx="70" cy="44" rx="24" ry="25" fill="#f7c9aa"/><path d="M46 35q6-27 27-20q22 0 22 23q-16-1-23-15q-8 14-26 12" fill="#294963"/><circle cx="61" cy="45" r="2" fill="#294963"/><circle cx="80" cy="45" r="2" fill="#294963"/><path d="M64 55q6 6 12 0" fill="none" stroke="#a64c43" stroke-width="2" stroke-linecap="round"/><circle cx="53" cy="53" r="4" fill="#eda897"/><circle cx="87" cy="53" r="4" fill="#eda897"/></g></svg><span>一起認識宿舍<small>護理科小嚮導 · 插畫</small></span></div><div class="section-title">
       <span class="tag">宿舍亮點</span>
-      <h2>安全、便利、照護，一次到位</h2>
+      <h2>課後日常，留在校園就好</h2>
       <p>原站介紹：校內設有 2 棟宿舍、共 1,288 床，提供套房式寢室與公共空間。實際床位釋出及配置以當期公告為準。</p>
     </div>
 
@@ -1038,8 +1011,8 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
         <img loading="lazy" src="LINE_ALBUM_2026523_260525_17.jpg" alt="新生醫專學生宿舍外觀" />
       </div>
       <div class="story">
-        <h2>生活環境舒適，學習日常更穩定</h2>
-        <p>宿舍鄰近操場、PU跑道與籃球場，周邊可遠眺青山與茶園。課後可運動、散步、放鬆心情，讓住宿生活不只是休息，更是成長的一部分。</p>
+        <h2>下課後，也有自己的步調</h2>
+        <p>宿舍鄰近操場、PU 跑道與籃球場。課後走走、動一動，再回房間休息；青山與茶園，也在日常風景裡。</p>
         <div class="checks">
           <div class="check">✅ <span><b>生活便利：</b>洗衣、烘衣、飲水、販賣機與簡易料理設備完善。</span></div>
           <div class="check">✅ <span><b>課後支持：</b>交誼廳、閱覽室與電腦空間，方便自習與討論。</span></div>
@@ -1059,10 +1032,10 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
   </section>
 
   <section id="real-photos">
-    <div class="section-title">
+    <div class="student-guide" data-pose="point"><svg viewBox="0 0 140 160" aria-hidden="true" focusable="false"><ellipse cx="70" cy="150" rx="42" ry="6" fill="#d9eacb"/><g class="student-body"><path d="M49 112h19v31H49zm23 0h19v31H72" fill="white" stroke="#345b80" stroke-width="2"/><path d="M47 141h22v8H43q-3-5 4-8m25 0h20l6 8H72" fill="#234668"/><path d="M45 68q25-13 50 0l5 47H40z" fill="#83cbed" stroke="#345b80" stroke-width="2"/><path d="M54 65q8 19 16 6q8 13 16-6" fill="white" stroke="#345b80" stroke-width="1.5"/><path d="M70 76v34M80 94h13v10H80z" fill="none" stroke="#fff" stroke-width="2"/><circle cx="73" cy="87" r="1.5" fill="white"/><g class="arm-left"><path d="M46 73L29 91" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M31 87l-5 6" stroke="white" stroke-width="8"/><circle cx="24" cy="98" r="7" fill="#f7c9aa"/></g><g class="arm-right"><path d="M94 74l17 17" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M108 87l6 6" stroke="white" stroke-width="8"/><circle cx="118" cy="97" r="7" fill="#f7c9aa"/></g><g class="book"><path d="M46 91q12-5 24 2q12-7 24-2v24q-12-4-24 1q-12-5-24-1z" fill="#fff4a7" stroke="#345b80" stroke-width="2"/><path d="M70 94v21" stroke="#345b80"/></g><path d="M45 43q-3-31 25-31q30 0 26 34l-3 21H46z" fill="#294963"/><ellipse cx="70" cy="44" rx="24" ry="25" fill="#f7c9aa"/><path d="M46 35q6-27 27-20q22 0 22 23q-16-1-23-15q-8 14-26 12" fill="#294963"/><circle cx="61" cy="45" r="2" fill="#294963"/><circle cx="80" cy="45" r="2" fill="#294963"/><path d="M64 55q6 6 12 0" fill="none" stroke="#a64c43" stroke-width="2" stroke-linecap="round"/><circle cx="53" cy="53" r="4" fill="#eda897"/><circle cx="87" cy="53" r="4" fill="#eda897"/></g></svg><span>看看真實環境<small>護理科小嚮導 · 插畫</small></span></div><div class="section-title">
       <span class="tag">宿舍實景</span>
-      <h2>看得見的環境，更安心的選擇</h2>
-      <p>透過宿舍內部與公共空間實景，讓學生與家長更直觀了解未來的住宿生活。</p>
+      <h2>看看宿舍裡的日常</h2>
+      <p>從寢室到公共空間，都是宿舍實景。點開照片，看清楚喜歡的角落。</p>
     </div>
 
     <div class="real-gallery">
@@ -1102,7 +1075,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
   </section>
 
   <section id="routine">
-    <div class="section-title">
+    <div class="student-guide" data-pose="read"><svg viewBox="0 0 140 160" aria-hidden="true" focusable="false"><ellipse cx="70" cy="150" rx="42" ry="6" fill="#d9eacb"/><g class="student-body"><path d="M49 112h19v31H49zm23 0h19v31H72" fill="white" stroke="#345b80" stroke-width="2"/><path d="M47 141h22v8H43q-3-5 4-8m25 0h20l6 8H72" fill="#234668"/><path d="M45 68q25-13 50 0l5 47H40z" fill="#83cbed" stroke="#345b80" stroke-width="2"/><path d="M54 65q8 19 16 6q8 13 16-6" fill="white" stroke="#345b80" stroke-width="1.5"/><path d="M70 76v34M80 94h13v10H80z" fill="none" stroke="#fff" stroke-width="2"/><circle cx="73" cy="87" r="1.5" fill="white"/><g class="arm-left"><path d="M46 73L29 91" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M31 87l-5 6" stroke="white" stroke-width="8"/><circle cx="24" cy="98" r="7" fill="#f7c9aa"/></g><g class="arm-right"><path d="M94 74l17 17" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M108 87l6 6" stroke="white" stroke-width="8"/><circle cx="118" cy="97" r="7" fill="#f7c9aa"/></g><g class="book"><path d="M46 91q12-5 24 2q12-7 24-2v24q-12-4-24 1q-12-5-24-1z" fill="#fff4a7" stroke="#345b80" stroke-width="2"/><path d="M70 94v21" stroke="#345b80"/></g><path d="M45 43q-3-31 25-31q30 0 26 34l-3 21H46z" fill="#294963"/><ellipse cx="70" cy="44" rx="24" ry="25" fill="#f7c9aa"/><path d="M46 35q6-27 27-20q22 0 22 23q-16-1-23-15q-8 14-26 12" fill="#294963"/><circle cx="61" cy="45" r="2" fill="#294963"/><circle cx="80" cy="45" r="2" fill="#294963"/><path d="M64 55q6 6 12 0" fill="none" stroke="#a64c43" stroke-width="2" stroke-linecap="round"/><circle cx="53" cy="53" r="4" fill="#eda897"/><circle cx="87" cy="53" r="4" fill="#eda897"/></g></svg><span>慢慢找到節奏<small>護理科小嚮導 · 插畫</small></span></div><div class="section-title">
       <span class="tag">生活作息</span>
       <h2>先認識宿舍的生活節奏</h2>
     </div>
@@ -1114,7 +1087,7 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
     </div>
   </section>
 
-<section id="faq" class="faq"><div class="section-title"><span class="tag">住宿問答</span><h2>入住前，你可能想知道</h2></div><details><summary>住宿費包含冷氣費嗎？</summary><p>住宿費包含水、電及燃料費；冷氣採儲值卡方式，費用另計。四人房與六人房都應另外預留這筆支出。</p></details><details><summary>選擇補助身分就代表能領到嗎？</summary><p>不是。此頁只是試算，沒有申請或審核功能。一般生與低收入戶／中低收入戶補助擇符合的類別計算，實際資格、核定與申請方式依當期公告。</p></details><details><summary>可以在這裡申請住宿或選床位嗎？</summary><p>此頁提供介紹，不收集個人資料，也不受理住宿申請。請至下方官方住宿資訊查看當期流程；房型與床位安排以學校核定為準。</p></details><details><summary>生活設施與作息以什麼為準？</summary><p>此頁保留原站的宿舍設備與作息介紹供認識環境；實際開放、點名、門禁及寢室安排，請以入住當期住宿規範為準。</p></details></section></main>
+<section id="faq" class="faq"><div class="student-guide" data-pose="read"><svg viewBox="0 0 140 160" aria-hidden="true" focusable="false"><ellipse cx="70" cy="150" rx="42" ry="6" fill="#d9eacb"/><g class="student-body"><path d="M49 112h19v31H49zm23 0h19v31H72" fill="white" stroke="#345b80" stroke-width="2"/><path d="M47 141h22v8H43q-3-5 4-8m25 0h20l6 8H72" fill="#234668"/><path d="M45 68q25-13 50 0l5 47H40z" fill="#83cbed" stroke="#345b80" stroke-width="2"/><path d="M54 65q8 19 16 6q8 13 16-6" fill="white" stroke="#345b80" stroke-width="1.5"/><path d="M70 76v34M80 94h13v10H80z" fill="none" stroke="#fff" stroke-width="2"/><circle cx="73" cy="87" r="1.5" fill="white"/><g class="arm-left"><path d="M46 73L29 91" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M31 87l-5 6" stroke="white" stroke-width="8"/><circle cx="24" cy="98" r="7" fill="#f7c9aa"/></g><g class="arm-right"><path d="M94 74l17 17" stroke="#83cbed" stroke-width="16" stroke-linecap="round"/><path d="M108 87l6 6" stroke="white" stroke-width="8"/><circle cx="118" cy="97" r="7" fill="#f7c9aa"/></g><g class="book"><path d="M46 91q12-5 24 2q12-7 24-2v24q-12-4-24 1q-12-5-24-1z" fill="#fff4a7" stroke="#345b80" stroke-width="2"/><path d="M70 94v21" stroke="#345b80"/></g><path d="M45 43q-3-31 25-31q30 0 26 34l-3 21H46z" fill="#294963"/><ellipse cx="70" cy="44" rx="24" ry="25" fill="#f7c9aa"/><path d="M46 35q6-27 27-20q22 0 22 23q-16-1-23-15q-8 14-26 12" fill="#294963"/><circle cx="61" cy="45" r="2" fill="#294963"/><circle cx="80" cy="45" r="2" fill="#294963"/><path d="M64 55q6 6 12 0" fill="none" stroke="#a64c43" stroke-width="2" stroke-linecap="round"/><circle cx="53" cy="53" r="4" fill="#eda897"/><circle cx="87" cy="53" r="4" fill="#eda897"/></g></svg><span>入住前小筆記<small>護理科小嚮導 · 插畫</small></span></div><div class="section-title"><span class="tag">住宿問答</span><h2>入住前，你可能想知道</h2></div><details><summary>住宿費包含冷氣費嗎？</summary><p>住宿費包含水、電及燃料費；冷氣採儲值卡方式，費用另計。四人房與六人房都應另外預留這筆支出。</p></details><details><summary>選擇補助身分就代表能領到嗎？</summary><p>不是。此頁只是試算，沒有申請或審核功能。一般生與低收入戶／中低收入戶補助擇符合的類別計算，實際資格、核定與申請方式依當期公告。</p></details><details><summary>可以在這裡申請住宿或選床位嗎？</summary><p>此頁提供介紹，不收集個人資料，也不受理住宿申請。請至下方官方住宿資訊查看當期流程；房型與床位安排以學校核定為準。</p></details><details><summary>生活設施與作息以什麼為準？</summary><p>此頁保留原站的宿舍設備與作息介紹供認識環境；實際開放、點名、門禁及寢室安排，請以入住當期住宿規範為準。</p></details></section></main>
   <aside class="final" id="apply">
     <h2>準備好，走下一步</h2>
     <p>查看官方收費、住宿規範與當期申請公告。房型、補助及入住安排，向學校確認最安心。</p>
@@ -1129,10 +1102,10 @@ dialog{border:0;padding:0;color:var(--deep);background:var(--cream);border-radiu
 
 <dialog id="fee-dialog" aria-labelledby="fee-title" aria-describedby="fee-condition">
 <div class="sheet"><div class="sheet-head"><h2 id="fee-title">住宿費，一眼算好</h2><button type="button" class="close-dialog" aria-label="關閉費用比較" autofocus>×</button></div>
-<fieldset class="subsidy-picker"><legend>選擇補助身分 · 每人每學期</legend><button type="button" data-sheet-subsidy="0" aria-pressed="false">原住宿費</button><button type="button" data-sheet-subsidy="5000" aria-pressed="true">一般生</button><button type="button" data-sheet-subsidy="7000" aria-pressed="false">低收／中低收</button></fieldset>
-<div class="sheet-result"><article class="sheet-room"><h3>六人房</h3><small>原價 $10,500</small><span class="sheet-money" data-sheet-base="10500">$5,500</span><span class="sheet-unit">元／學期</span></article><article class="sheet-room"><h3>四人房</h3><small>一般套房・原價 $13,500</small><span class="sheet-money" data-sheet-base="13500">$8,500</span><span class="sheet-unit">元／學期</span></article></div>
+<fieldset class="subsidy-picker"><legend>選擇補助身分 · 每人每學期</legend><button type="button" data-sheet-subsidy="5000" aria-pressed="true">一般生</button><button type="button" data-sheet-subsidy="7000" aria-pressed="false">低收／中低收</button></fieldset>
+<div class="sheet-result"><article class="sheet-room"><h3>六人房</h3><small>套房式寢室</small><span class="sheet-money" data-sheet-base="10500">$5,500</span><span class="sheet-unit">元／學期</span></article><article class="sheet-room"><h3>四人房</h3><small>一般套房</small><span class="sheet-money" data-sheet-base="13500">$8,500</span><span class="sheet-unit">元／學期</span></article></div>
 <p class="sheet-status" id="sheet-status" role="status" aria-live="polite">一般生：符合資格後補助 $5,000 的試算</p><p class="sheet-terms" id="fee-condition">含水、電及燃料費；<b>冷氣儲值另計</b>。<br>不含寒暑假，補助與入住安排依當期核定。</p>
-<details><summary>查看收費依據與補助細則</summary><p>收費參照官方連結之 2025/2/27 標準；補助參考學校招生資料。補助擇一、不重複相加，其他適用身分請洽住服組。另有四人溫馨房 $10,500，房型配置以學校核定為準。本頁不受理申請，也不保證床位。</p><a href="https://sa.hsc.edu.tw/p/404-1002-12919.php?Lang=zh-tw" target="_blank" rel="noopener">查看學校收費與宿舍資訊 ↗</a></details></div></dialog>
+<details><summary>查看原價算式與補助細則</summary><p>六人房 10,500 − 5,000 = 5,500 元；一般四人房 13,500 − 5,000 = 8,500 元。</p><button type="button" data-sheet-subsidy="0" aria-pressed="false">查看未扣補助金額</button><p>收費參照官方連結之 2025/2/27 標準；補助參考學校招生資料。補助擇一、不重複相加，其他適用身分請洽住服組。另有四人溫馨房 $10,500，房型配置以學校核定為準。本頁不受理申請，也不保證床位。</p><a href="https://sa.hsc.edu.tw/p/404-1002-12919.php?Lang=zh-tw" target="_blank" rel="noopener">查看學校收費與宿舍資訊 ↗</a></details></div></dialog>
 <dialog id="photo-dialog" aria-labelledby="photo-title"><div class="lightbox-head"><h2 id="photo-title">宿舍實景</h2><button type="button" class="close-dialog" aria-label="關閉照片" autofocus>×</button></div><img id="lightbox-image" alt=""><p id="photo-caption"></p></dialog>
 <nav class="mobile-nav" aria-label="手機快速導覽"><a href="#price">費用比較</a><a href="#real-photos">真實照片</a><a href="#faq">住宿問答</a><a href="#apply">申請資訊</a></nav>
 <script>
@@ -1196,6 +1169,16 @@ document.querySelectorAll('.real-card a').forEach(a=>{
  a.addEventListener('click',e=>{e.preventDefault();const card=a.parentElement,img=card.querySelector('img');document.getElementById('lightbox-image').src=a.getAttribute('href');document.getElementById('lightbox-image').alt=img.alt;document.getElementById('photo-title').textContent=card.querySelector('strong').textContent;document.getElementById('photo-caption').textContent=card.querySelector('span').textContent+'｜原站實景照片';openModal(photoDialog,a)});
 });
 if('IntersectionObserver' in window&&!reduced.matches){const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('reveal-ready');e.target.classList.add('reveal-in');reveal.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.real-card').forEach(el=>{el.classList.add('reveal-ready');reveal.observe(el)})}
+
+// Section-driven motion only: native scrolling, no wheel/touch interception.
+if('IntersectionObserver' in window){
+ const guideObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  const guide=entry.target.querySelector('.student-guide');if(guide)guide.classList.toggle('is-active',entry.isIntersecting);
+  if(entry.isIntersecting)document.body.dataset.guideState=guide?.dataset.pose||'wave';
+ }),{threshold:0,rootMargin:'-12% 0px -30% 0px'});
+ document.querySelectorAll('section:has(.student-guide)').forEach(section=>guideObserver.observe(section));
+ if(!reduced.matches){const chapters=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.replace('chapter-ready','chapter-in');chapters.unobserve(entry.target)}}),{threshold:.08});document.querySelectorAll('.section-title,.feature,.split,.time-item').forEach(el=>{el.classList.add('chapter-ready');chapters.observe(el)})}
+}
 </script>
 </body>
 </html>
