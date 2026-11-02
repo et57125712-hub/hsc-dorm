@@ -961,6 +961,49 @@ html[data-motion="off"]{scroll-behavior:auto}html[data-motion="off"] .reveal-rea
 @media(max-width:700px){.life-intro{display:block;margin-bottom:24px}.life-intro h2{font-size:30px}.motion-control{margin-top:10px}.life-layout{display:block}.life-stage{display:none}.life-step{min-height:0;padding:0 0 58px;scroll-margin-top:86px}.life-mobile-photo{display:block;width:100%;height:300px;object-fit:cover;margin:18px 0 0}.life-step h3{font-size:29px;margin:22px 0 12px}.life-step p{font-size:15px;margin-top:0}.life-step>small{font-size:24px}.life-step a{font-size:14px}.life-step.is-current .life-mobile-photo{animation:life-arrive .65s ease both}.life-steps-nav{display:none}.life-intro p{font-size:14px}.journal-cover img{will-change:auto}}
 @keyframes life-arrive{from{opacity:.8;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){body,.life-pictures img,.journal-cover img{transition:none;transform:none!important;animation:none!important}.life-stage{display:none}.life-layout{display:block}.life-step{min-height:0;margin-bottom:40px}.life-mobile-photo{display:block;width:100%;max-height:460px;object-fit:cover}}
+
+/* Mobile edition: photo-first cover and paced, borderless editorial chapters. */
+@media(max-width:700px){
+ body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
+ .journal-hero{display:grid;grid-template-columns:1fr;width:calc(100% - 36px);padding-top:12px}
+ .journal-mast{grid-row:1;padding-bottom:10px;font-size:8px}
+ .journal-intro{display:contents}.journal-intro>div:first-child{grid-row:2;padding:12px 0 12px}
+ .journal-kicker{font-size:10px;margin:0 0 7px;letter-spacing:.13em}
+ .journal-intro h1{font-size:36px;line-height:1.27;letter-spacing:.045em}
+ .journal-intro h1 br{display:initial}
+ .journal-cover{grid-row:3;margin:0 -18px;overflow:hidden}
+ .journal-cover img{height:clamp(224px,35svh,290px);object-position:58% 50%;width:100%}
+ .journal-cover figcaption{padding:9px 18px;font-size:10px;letter-spacing:.02em}
+ .journal-summary{grid-row:4;padding:12px 0 0}
+ .journal-summary p{font-size:13px;line-height:1.75;margin:0 0 12px;max-width:30em}
+ .journal-summary p br{display:none}
+ .journal-summary .cta-row{gap:18px;margin:0}.journal-summary .btn{padding:11px 14px;font-size:13px;min-height:44px}
+ .journal-textlink{font-size:12px;padding:12px 0;min-height:44px}
+ .journal-index{grid-row:5;margin-top:20px}.journal-index a{padding:12px 0;font-size:11px}.journal-index small{display:inline;margin-right:5px;font-size:10px}
+ .life-journal{padding-top:42px!important;padding-bottom:12px!important}
+ .life-intro{position:relative;border:0;padding:0;margin:0 0 30px}
+ .life-intro small{font-size:10px;letter-spacing:.12em}.life-intro h2{font-size:26px;line-height:1.5;margin:12px 0 8px}
+ .life-intro p{font-size:12px;max-width:21em;margin-bottom:0}
+ .motion-control{font-size:10px;min-height:44px;padding:8px 0;border:0;border-bottom:1px solid #acb6aa;border-radius:0;margin-top:6px}
+ .life-step{position:relative;display:grid;grid-template-columns:1fr;min-height:0;padding:0 0 44px;margin:0;scroll-margin-top:90px;outline-offset:3px}
+ .life-step>small{font-family:inherit;font-size:11px;line-height:1.6;letter-spacing:.09em;grid-row:1;color:#8c6b55;padding:0 0 10px}
+ .life-mobile-photo{grid-row:2;width:100%;height:236px;object-fit:cover;object-position:50% 55%;margin:0;clip-path:inset(0);animation:none!important;transition:clip-path .85s cubic-bezier(.2,.65,.3,1),transform .85s ease}
+ .life-step h3{grid-row:3;font-size:25px;line-height:1.55;margin:17px 0 8px;letter-spacing:.025em}
+ .life-step p{grid-row:4;font-size:13px;line-height:1.85;margin:0;max-width:27em}
+ .life-step a{grid-row:5;font-size:12px;padding:11px 0 6px;margin-top:8px;justify-self:start;min-height:44px}
+ .life-step:nth-child(2){padding-left:26px}.life-step:nth-child(2) .life-mobile-photo{height:210px}.life-step:nth-child(2)>small{border-top:1px solid #c4cbbf;padding-top:16px}
+ .life-step:nth-child(3){padding-right:26px}.life-step:nth-child(3) .life-mobile-photo{height:206px}.life-step:nth-child(3)>small{border-top:1px solid #c4cbbf;padding-top:16px}
+ .life-step.photo-pending .life-mobile-photo{clip-path:inset(0 0 9% 0);transform:translateY(8px)}
+ .life-journal.is-static .life-step{margin-bottom:0}.life-journal.is-static .life-mobile-photo{height:236px;clip-path:none;transform:none}
+ .mobile-nav{padding:7px 12px calc(7px + env(safe-area-inset-bottom,0px));gap:4px;border-top:1px solid #d5d9ce;background:#f8f6f0fa;box-shadow:0 -3px 18px #203e5508}
+ .mobile-nav a{min-height:44px;display:flex;align-items:center;justify-content:center;font-size:12px;padding:8px 5px}
+ .mobile-nav a:first-child{background:#203e55;color:white}.mobile-nav a:last-child{background:transparent;color:#203e55}
+ .real-gallery{gap:24px 14px}.real-card.featured img{height:250px}.real-card span{line-height:1.7}
+ html[data-motion="off"] .life-mobile-photo{clip-path:none!important;transform:none!important}
+}
+@media(max-width:380px){.journal-intro h1{font-size:30px;line-height:1.2}.journal-summary p{font-size:12px}.journal-cover img{height:210px}.life-mobile-photo{height:220px}}
+@media(prefers-reduced-motion:reduce){.life-mobile-photo{clip-path:none!important;transform:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -1208,6 +1251,8 @@ if('IntersectionObserver' in window){
  const hero=document.querySelector('.journal-cover'),r=hero.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)hero.style.setProperty('--cover-scale',String(1+Math.min(Math.max(-r.top/innerHeight,0),1)*.025));
  }
  function schedule(){if(!queued){queued=true;requestAnimationFrame(update)}}
+ // A one-time photo reveal, never a repeated animation or a scroll trap.
+ if('IntersectionObserver' in window){const photoObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('photo-pending');photoObserver.unobserve(entry.target)}})},{threshold:.12});steps.forEach(el=>{el.classList.add('photo-pending');photoObserver.observe(el)})}
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);reduced.addEventListener('change',schedule);toggle.addEventListener('click',()=>{manualOff=!manualOff;update()});update();
 })();
 </script>
